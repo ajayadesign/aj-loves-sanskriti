@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#a06943', accent: '#c35058', cta: '#c35058', ctaHover: '#FFB3B8', surface: '#FFF5F0', surfaceAlt: '#FFE8DC', textMain: '#4E4E4E', textMuted: '#7D7D7D' }, fontFamily: { heading: ['Lora'], body: ['Nunito Sans'] } } } }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--tw-gradient-from, #fff), var(--tw-gradient-to, #ccc));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .noise::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    .counter { display: inline-block; }
+  </style>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <title>Contact Us — AJ loves Sanskriti</title>
+  <meta name="description" content="Provide an easy way for families to reach out with inquiries or feedback.">
+  <meta property="og:title" content="Contact Us — AJ loves Sanskriti">
+  <meta property="og:description" content="Provide an easy way for families to reach out with inquiries or feedback.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+
+</head>
+<body class="bg-surface text-textMain font-body antialiased overflow-x-hidden">
+<nav class='fixed w-full backdrop-blur-xl bg-[rgba(255,197,162,0.8)] shadow-md transition-all duration-300 py-4 px-6 flex items-center justify-between'> <div class='flex items-center space-x-4'> <a href='index.html' class='text-primary font-bold text-lg'>AJ loves Sanskriti</a> <span class='text-textMuted hidden sm:inline'>Celebrating Joyful Beginnings with Your Baby</span> </div> <div class='hidden sm:flex space-x-6'> <a href='about.html' class='text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='text-textMuted hover:text-primary transition'>Products</a> <a href='contact.html' class='text-primary font-bold'>Contact</a> </div> <button class='sm:hidden text-primary focus:outline-none' id='mobileMenuButton'>☰</button> <a href='contact.html' class='bg-accent text-white px-4 py-2 rounded-md shadow-md hover:bg-ctaHover transition'>Get in Touch</a> <div id='mobileMenu' class='hidden absolute top-full left-0 w-full bg-surfaceAlt shadow-md'> <a href='about.html' class='block px-4 py-2 text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='block px-4 py-2 text-textMuted hover:text-primary transition'>Products</a> <a href='contact.html' class='block px-4 py-2 text-primary font-bold'>Contact</a> </div> </nav>
+<main class="font-body">
+  <!-- Contact Form Section -->
+  <section id="contact-form" class="bg-surface py-16 md:py-24" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-heading text-primary mb-6 text-center" style="color: #000000;">Business Name</h1>
+      <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6 text-center" style="color: #000000;">We’d Love to Hear From You</h2>
+      <p class="text-lg text-textMuted mb-12 text-center" style="color: #333333;">Have a question, feedback, or just want to say hi? Fill out the form below!</p>
+      <form action="https://formsubmit.co/chaulagainsanskriti83@gmail.com" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-textMain mb-1" style="color: #000000;">Your Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your name">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-textMain mb-1" style="color: #000000;">Your Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your email">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-textMain mb-1" style="color: #000000;">Your Message</label>
+          <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Write your message"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg text-lg font-heading transition transform hover:scale-105" style="background-color: #003366;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Email Details Section -->
+  <section id="email-details" class="bg-surfaceAlt py-16 md:py-24" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6" style="color: #000000;">Reach Out Anytime</h2>
+      <p class="text-lg text-textMuted mb-4" style="color: #333333;">Prefer to email us directly? We’re here to help!</p>
+      <a href="mailto:chaulagainsanskriti83@gmail.com" class="text-accent font-bold underline hover:text-cta" style="color: #003366;">chaulagainsanskriti83@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- Social Links Section -->
+  <section id="social-links" class="bg-surface py-16 md:py-24" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6" style="color: #000000;">Follow Us on Social Media</h2>
+      <p class="text-lg text-textMuted mb-12" style="color: #333333;">Stay connected and celebrate joyful moments with us online.</p>
+      <div class="flex justify-center space-x-8">
+        <a href="https://www.facebook.com" target="_blank" class="text-primary text-2xl hover:scale-105 transform transition" aria-label="Facebook" style="color: #003366;">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="text-primary text-2xl hover:scale-105 transform transition" aria-label="Instagram" style="color: #003366;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="text-primary text-2xl hover:scale-105 transform transition" aria-label="Twitter" style="color: #003366;">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map" class="bg-surfaceAlt py-16 md:py-24" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-heading text-primary mb-6 text-center" style="color: #000000;">Visit Us</h2>
+      <p class="text-lg text-textMuted mb-12 text-center" style="color: #333333;">Here’s where you can find us!</p>
+      <div class="overflow-hidden rounded-lg shadow-lg">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093746!2d-122.41941568467983!3d37.77492927975969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2c06394a03%3A0xb9a3a221d4f0a00b!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1634480980640!5m2!1sen!2sus" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy" 
+          class="rounded-lg"
+          aria-label="Google Maps embed showing location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class='bg-surfaceAlt py-8 px-6'> <div class='grid grid-cols-1 sm:grid-cols-3 gap-6'> <div> <h3 class='text-primary font-bold mb-4'>AJ loves Sanskriti</h3> <p class='text-textMuted'>Celebrating Joyful Beginnings with Your Baby</p> </div> <div> <h3 class='text-primary font-bold mb-4'>Quick Links</h3> <a href='about.html' class='block text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='block text-textMuted hover:text-primary transition'>Products</a> <a href='contact.html' class='block text-textMuted hover:text-primary transition'>Contact</a> </div> <div> <h3 class='text-primary font-bold mb-4'>Follow Us</h3> <a href='https://facebook.com' class='block text-textMuted hover:text-primary transition'>Facebook</a> <a href='https://instagram.com' class='block text-textMuted hover:text-primary transition'>Instagram</a> <a href='https://twitter.com' class='block text-textMuted hover:text-primary transition'>Twitter</a> </div> </div> <div class='mt-6 text-center text-textMuted'>Built by <a href='https://ajayadesign.github.io' class='text-primary hover:underline'>AjayaDesign</a>. © 2026 AJ loves Sanskriti. All rights reserved.</div> </footer>
+<script> document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); </script>
+<script> document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); </script>
+<script>/* js-safety-guard */
+try {
+ document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); 
+} catch(e) { console.warn('Script error:', e); }
+</script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 80 });
+  document.querySelectorAll('.counter').forEach(el => {
+    const target = parseInt(el.dataset.target || el.textContent, 10);
+    if (isNaN(target)) return;
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 60));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { el.textContent = target.toLocaleString(); clearInterval(timer); }
+      else { el.textContent = current.toLocaleString(); }
+    }, 25);
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('back-to-top').style.opacity = window.scrollY > 400 ? '1' : '0';
+  });
+</script>
+</body>
+</html>

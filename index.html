@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#a06943', accent: '#c35058', cta: '#c35058', ctaHover: '#FFB3B8', surface: '#FFF5F0', surfaceAlt: '#FFE8DC', textMain: '#4E4E4E', textMuted: '#7D7D7D' }, fontFamily: { heading: ['Lora'], body: ['Nunito Sans'] } } } }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--tw-gradient-from, #fff), var(--tw-gradient-to, #ccc));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .noise::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    .counter { display: inline-block; }
+  </style>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <title>Home — AJ loves Sanskriti</title>
+  <meta name="description" content="Introduce the brand, create an emotional connection with families, and guide them to explore products or services.">
+  <meta property="og:title" content="Home — AJ loves Sanskriti">
+  <meta property="og:description" content="Introduce the brand, create an emotional connection with families, and guide them to explore products or services.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "AJ loves Sanskriti",
+  "description": "Celebrating Joyful Beginnings with Your Baby"
+}</script>
+
+
+</head>
+<body class="bg-surface text-textMain font-body antialiased overflow-x-hidden">
+<nav class='fixed w-full backdrop-blur-xl bg-[rgba(255,197,162,0.8)] shadow-md transition-all duration-300 py-4 px-6 flex items-center justify-between'> <div class='flex items-center space-x-4'> <a href='index.html' class='text-primary font-bold text-lg'>AJ loves Sanskriti</a> <span class='text-textMuted hidden sm:inline'>Celebrating Joyful Beginnings with Your Baby</span> </div> <div class='hidden sm:flex space-x-6'> <a href='about.html' class='text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='text-textMuted hover:text-primary transition'>Products</a> <a href='contact.html' class='text-textMuted hover:text-primary transition'>Contact</a> </div> <button class='sm:hidden text-primary focus:outline-none' id='mobileMenuButton'>☰</button> <a href='contact.html' class='bg-accent text-white px-4 py-2 rounded-md shadow-md hover:bg-ctaHover transition'>Get in Touch</a> <div id='mobileMenu' class='hidden absolute top-full left-0 w-full bg-surfaceAlt shadow-md'> <a href='about.html' class='block px-4 py-2 text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='block px-4 py-2 text-textMuted hover:text-primary transition'>Products</a> <a href='contact.html' class='block px-4 py-2 text-textMuted hover:text-primary transition'>Contact</a> </div> </nav>
+<main>
+  <!-- Hero Section -->
+  <section id="hero" class="relative bg-surface min-h-screen flex items-center justify-center text-center" data-aos="fade-up">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1604697964151-9f8e108d0b3c?w=1600&q=80" alt="Parent holding a baby amidst warm light" class="absolute inset-0 w-full h-full object-cover z-0">
+    <div class="relative z-10 max-w-3xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-heading text-primary" data-aos="fade-up" data-aos-duration="1000" style="color: #1a1a1a;">
+        AJ loves Sanskriti - Celebrating Joyful Beginnings with Your Baby
+      </h1>
+      <p class="mt-4 text-lg md:text-xl font-body text-textMain" data-aos="fade-up" data-aos-delay="200" style="color: #4a4a4a;">
+        Discover thoughtful ways to honor every milestone with love and care.
+      </p>
+      <a href="products.html" class="mt-6 inline-block bg-cta text-white text-lg font-body py-3 px-6 rounded-lg hover:bg-ctaHover transition" data-aos="fade-up" data-aos-delay="400" style="background-color: #004080; color: #ffffff;">
+        Explore Our Journey
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-surfaceAlt py-16 md:py-24" data-aos="fade-up">
+    <div class="container mx-auto px-6 md:flex md:items-center md:space-x-12">
+      <div class="md:w-1/2">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80" alt="Smiling parents playing with their baby" data-aos="zoom-in" class="rounded-xl shadow-lg">
+      </div>
+      <div class="mt-8 md:mt-0 md:w-1/2">
+        <h2 class="text-3xl font-heading text-primary" style="color: #1a1a1a;">Welcome to AJ loves Sanskriti</h2>
+        <p class="mt-4 text-lg font-body text-textMain" style="color: #4a4a4a;">
+          We’re a family-first brand dedicated to celebrating the little moments that mean the most. From your baby’s first giggle to their first steps, we craft products that make these milestones unforgettable.
+        </p>
+        <p class="mt-4 text-lg font-body text-textMain" style="color: #4a4a4a;">
+          Thoughtfully designed, eco-friendly, and made with love, our products bring families closer together.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section id="featured-products" class="bg-surface py-16 md:py-24" data-aos="fade-up">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-heading text-primary text-center" style="color: #1a1a1a;">Celebrate Milestones with These Favorites</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="0">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1600718370534-6e09c0c6f4d5?w=800&q=80" alt="Handmade baby blanket" class="rounded-t-xl">
+          <div class="p-6">
+            <h3 class="text-xl font-heading text-primary" style="color: #1a1a1a;">Handmade Baby Blanket</h3>
+            <p class="mt-2 text-textMuted font-body" style="color: #4a4a4a;">Soft, organic, and perfect for cuddles.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="100">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1603202112988-4fbbce5e9e10?w=800&q=80" alt="Custom milestone cards" class="rounded-t-xl">
+          <div class="p-6">
+            <h3 class="text-xl font-heading text-primary" style="color: #1a1a1a;">Custom Milestone Cards</h3>
+            <p class="mt-2 text-textMuted font-body" style="color: #4a4a4a;">Capture every special moment with style.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="200">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1608032360712-6f8b8e8f6a76?w=800&q=80" alt="Eco-friendly baby toys" class="rounded-t-xl">
+          <div class="p-6">
+            <h3 class="text-xl font-heading text-primary" style="color: #1a1a1a;">Eco-Friendly Baby Toys</h3>
+            <p class="mt-2 text-textMuted font-body" style="color: #4a4a4a;">Safe, sustainable, and fun for your baby.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-surfaceAlt py-16 md:py-24" data-aos="fade-up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-heading text-primary" style="color: #1a1a1a;">What Families Are Saying</h2>
+      <blockquote class="mt-8 text-lg font-body text-textMuted italic" style="color: #4a4a4a;">
+        "AJ loves Sanskriti has made our baby’s first year so magical. The quality and love in their products are unmatched!"
+      </blockquote>
+      <p class="mt-4 font-body text-textMain" style="color: #4a4a4a;">— Sarah T., New Mom</p>
+      <blockquote class="mt-8 text-lg font-body text-textMuted italic" style="color: #4a4a4a;">
+        "We cherish every memory captured with AJ loves Sanskriti’s milestone cards. They’re beautifully designed and so thoughtful!"
+      </blockquote>
+      <p class="mt-4 font-body text-textMain" style="color: #4a4a4a;">— Michael & Emma, Proud Parents</p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="bg-gradient-to-br from-primary via-accent to-secondary py-16 md:py-24" data-aos="fade-up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-heading text-white">Start Your Family’s Journey with Us</h2>
+      <p class="mt-4 text-lg font-body text-white">
+        Join thousands of families who trust AJ loves Sanskriti for celebrating joyful beginnings.
+      </p>
+      <a href="products.html" class="mt-6 inline-block bg-white text-primary text-lg font-body py-3 px-6 rounded-lg hover:bg-gray-100 transition" style="color: #004080;">
+        Browse Our Collection
+      </a>
+    </div>
+  </section>
+</main>
+<footer class='bg-surfaceAlt py-8 px-6'> <div class='grid grid-cols-1 sm:grid-cols-3 gap-6'> <div> <h3 class='text-primary font-bold mb-4'>AJ loves Sanskriti</h3> <p class='text-textMuted'>Celebrating Joyful Beginnings with Your Baby</p> </div> <div> <h3 class='text-primary font-bold mb-4'>Quick Links</h3> <a href='about.html' class='block text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='block text-textMuted hover:text-primary transition'>Products</a> <a href='contact.html' class='block text-textMuted hover:text-primary transition'>Contact</a> </div> <div> <h3 class='text-primary font-bold mb-4'>Follow Us</h3> <a href='https://facebook.com' class='block text-textMuted hover:text-primary transition'>Facebook</a> <a href='https://instagram.com' class='block text-textMuted hover:text-primary transition'>Instagram</a> <a href='https://twitter.com' class='block text-textMuted hover:text-primary transition'>Twitter</a> </div> </div> <div class='mt-6 text-center text-textMuted'>Built by <a href='https://ajayadesign.github.io' class='text-primary hover:underline'>AjayaDesign</a>. © 2026 AJ loves Sanskriti. All rights reserved.</div> </footer>
+<script> document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); </script>
+<script> document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); </script>
+<script>/* js-safety-guard */
+try {
+ document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); 
+} catch(e) { console.warn('Script error:', e); }
+</script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 80 });
+  document.querySelectorAll('.counter').forEach(el => {
+    const target = parseInt(el.dataset.target || el.textContent, 10);
+    if (isNaN(target)) return;
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 60));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { el.textContent = target.toLocaleString(); clearInterval(timer); }
+      else { el.textContent = current.toLocaleString(); }
+    }, 25);
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('back-to-top').style.opacity = window.scrollY > 400 ? '1' : '0';
+  });
+</script>
+</body>
+</html>

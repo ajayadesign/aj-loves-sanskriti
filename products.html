@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#a06943', accent: '#c35058', cta: '#c35058', ctaHover: '#FFB3B8', surface: '#FFF5F0', surfaceAlt: '#FFE8DC', textMain: '#4E4E4E', textMuted: '#7D7D7D' }, fontFamily: { heading: ['Lora'], body: ['Nunito Sans'] } } } }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--tw-gradient-from, #fff), var(--tw-gradient-to, #ccc));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .noise::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    .counter { display: inline-block; }
+  </style>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <title>Our Products — AJ loves Sanskriti</title>
+  <meta name="description" content="Showcase the product range, focusing on items that help parents celebrate their babies' milestones.">
+  <meta property="og:title" content="Our Products — AJ loves Sanskriti">
+  <meta property="og:description" content="Showcase the product range, focusing on items that help parents celebrate their babies' milestones.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+
+</head>
+<body class="bg-surface text-textMain font-body antialiased overflow-x-hidden">
+<nav class='fixed w-full backdrop-blur-xl bg-[rgba(255,197,162,0.8)] shadow-md transition-all duration-300 py-4 px-6 flex items-center justify-between'> <div class='flex items-center space-x-4'> <a href='index.html' class='text-primary font-bold text-lg'>AJ loves Sanskriti</a> <span class='text-textMuted hidden sm:inline'>Celebrating Joyful Beginnings with Your Baby</span> </div> <div class='hidden sm:flex space-x-6'> <a href='about.html' class='text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='text-primary font-bold'>Products</a> <a href='contact.html' class='text-textMuted hover:text-primary transition'>Contact</a> </div> <button class='sm:hidden text-primary focus:outline-none' id='mobileMenuButton'>☰</button> <a href='contact.html' class='bg-accent text-white px-4 py-2 rounded-md shadow-md hover:bg-ctaHover transition'>Get in Touch</a> <div id='mobileMenu' class='hidden absolute top-full left-0 w-full bg-surfaceAlt shadow-md'> <a href='about.html' class='block px-4 py-2 text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='block px-4 py-2 text-primary font-bold'>Products</a> <a href='contact.html' class='block px-4 py-2 text-textMuted hover:text-primary transition'>Contact</a> </div> </nav>
+<main class="font-body bg-surface text-textMain">
+  <!-- Hero Banner -->
+  <section id="hero-banner" class="relative min-h-screen bg-surfaceAlt flex items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary via-accent to-secondary opacity-30"></div>
+    <div class="relative max-w-4xl text-center px-4" data-aos="fade-up" data-aos-duration="1000">
+      <h1 class="text-4xl md:text-5xl font-heading font-bold text-textMain mb-4">
+        Cherish Every Little Moment
+      </h1>
+      <p class="text-lg md:text-xl font-body text-textMain mb-8" data-aos="fade-up" data-aos-delay="200" style="color: #1a1a1a;">
+        Celebrate your baby’s milestones with thoughtful, handcrafted products made with love.
+      </p>
+      <a href="contact.html" class="inline-block bg-cta text-white font-body py-3 px-6 rounded-lg shadow-lg hover:bg-ctaHover transition" style="background-color: #003f7f;">
+        Start Your Journey
+      </a>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="product-grid" class="py-16 md:py-24 bg-surface" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-textMain text-center mb-8">
+        Our Handpicked Products
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="bg-surfaceAlt p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="0">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1504151932400-72d4384f04b3?w=800&q=80" alt="Handcrafted baby milestone cards with colorful designs" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-2xl font-heading text-textMain mb-2">Milestone Cards</h3>
+          <p class="text-textMain" style="color: #1a1a1a;">Capture every special moment with our beautifully designed milestone cards.</p>
+        </article>
+        <article class="bg-surfaceAlt p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="100">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1560807707-8cc77767d783?w=800&q=80" alt="Customizable baby blankets in soft pastel colors" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-2xl font-heading text-textMain mb-2">Custom Baby Blankets</h3>
+          <p class="text-textMain" style="color: #1a1a1a;">Soft, cozy, and personalized for your little bundle of joy.</p>
+        </article>
+        <article class="bg-surfaceAlt p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="200">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1598966733524-8508cb1546b8?w=800&q=80" alt="Elegant keepsake photo albums for baby memories" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-2xl font-heading text-textMain mb-2">Keepsake Photo Albums</h3>
+          <p class="text-textMain" style="color: #1a1a1a;">Treasure your baby’s photos forever in our elegant albums.</p>
+        </article>
+        <article class="bg-surfaceAlt p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="300">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1560807707-e3a86e1c7d1c?w=800&q=80" alt="Baby milestone memory boxes for keepsakes" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-2xl font-heading text-textMain mb-2">Memory Boxes</h3>
+          <p class="text-textMain" style="color: #1a1a1a;">Store and cherish your baby’s precious keepsakes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collections -->
+  <section id="featured-collections" class="py-16 md:py-24 bg-surfaceAlt" data-aos="fade-up">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-textMain mb-8">
+        Featured Collections
+      </h2>
+      <p class="text-lg font-body text-textMain mb-12" style="color: #1a1a1a;">
+        Discover curated collections that perfectly capture the joy of parenthood.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="0">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1577896851231-040e6b6d2ff7?w=800&q=80" alt="Eco-friendly baby toys made from sustainable materials" class="w-full h-48 object-cover">
+          <div class="p-6 bg-surface">
+            <h3 class="text-xl font-heading text-textMain mb-2">Eco-Friendly Toys</h3>
+            <p class="text-textMain" style="color: #1a1a1a;">Sustainably made, safe, and fun for your little one.</p>
+          </div>
+        </article>
+        <article class="rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="100">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1592194996308-7d8f7d3757d8?w=800&q=80" alt="Personalized nursery decor items" class="w-full h-48 object-cover">
+          <div class="p-6 bg-surface">
+            <h3 class="text-xl font-heading text-textMain mb-2">Personalized Nursery Décor</h3>
+            <p class="text-textMain" style="color: #1a1a1a;">Add a personal touch to your baby’s first space.</p>
+          </div>
+        </article>
+        <article class="rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition" data-aos="fade-up" data-aos-delay="200">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80" alt="Handmade baby clothing in various designs" class="w-full h-48 object-cover">
+          <div class="p-6 bg-surface">
+            <h3 class="text-xl font-heading text-textMain mb-2">Handmade Baby Clothing</h3>
+            <p class="text-textMain" style="color: #1a1a1a;">Comfortable and adorable outfits for your little one.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action -->
+  <section id="cta" class="py-16 md:py-24 bg-gradient-to-br from-primary via-accent to-secondary text-white text-center" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+        Ready to Celebrate Your Baby’s Milestones?
+      </h2>
+      <p class="text-lg font-body mb-8" style="color: #ffffff;">
+        Find the perfect products to treasure every moment.
+      </p>
+      <a href="contact.html" class="inline-block bg-white text-primary font-body py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition" style="color: #003f7f;">
+        Explore Our Collection
+      </a>
+    </div>
+  </section>
+</main>
+<footer class='bg-surfaceAlt py-8 px-6'> <div class='grid grid-cols-1 sm:grid-cols-3 gap-6'> <div> <h3 class='text-primary font-bold mb-4'>AJ loves Sanskriti</h3> <p class='text-textMuted'>Celebrating Joyful Beginnings with Your Baby</p> </div> <div> <h3 class='text-primary font-bold mb-4'>Quick Links</h3> <a href='about.html' class='block text-textMuted hover:text-primary transition'>About</a> <a href='products.html' class='block text-textMuted hover:text-primary transition'>Products</a> <a href='contact.html' class='block text-textMuted hover:text-primary transition'>Contact</a> </div> <div> <h3 class='text-primary font-bold mb-4'>Follow Us</h3> <a href='https://facebook.com' class='block text-textMuted hover:text-primary transition'>Facebook</a> <a href='https://instagram.com' class='block text-textMuted hover:text-primary transition'>Instagram</a> <a href='https://twitter.com' class='block text-textMuted hover:text-primary transition'>Twitter</a> </div> </div> <div class='mt-6 text-center text-textMuted'>Built by <a href='https://ajayadesign.github.io' class='text-primary hover:underline'>AjayaDesign</a>. © 2026 AJ loves Sanskriti. All rights reserved.</div> </footer>
+<script> document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); </script>
+<script> document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); </script>
+<script>/* js-safety-guard */
+try {
+ document.getElementById('mobileMenuButton').addEventListener('click', function() { const menu = document.getElementById('mobileMenu'); menu.classList.toggle('hidden'); }); 
+} catch(e) { console.warn('Script error:', e); }
+</script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 80 });
+  document.querySelectorAll('.counter').forEach(el => {
+    const target = parseInt(el.dataset.target || el.textContent, 10);
+    if (isNaN(target)) return;
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 60));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { el.textContent = target.toLocaleString(); clearInterval(timer); }
+      else { el.textContent = current.toLocaleString(); }
+    }, 25);
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+  });
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('back-to-top').style.opacity = window.scrollY > 400 ? '1' : '0';
+  });
+</script>
+</body>
+</html>
